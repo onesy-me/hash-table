@@ -5,7 +5,7 @@ import { evaluate } from '../utils/js/test/utils';
 
 import AmauiHashTable from '../src';
 
-group('@amaui/hash-table', () => {
+group('AmauiHashTable', () => {
 
   to('AmauiHashTable', async () => {
     const value = new AmauiHashTable();

@@ -1,1 +1,1 @@
-export { default } from './amaui-hash-table';
+export { default } from './AmauiHashTable';

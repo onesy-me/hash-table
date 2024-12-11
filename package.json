@@ -2,7 +2,7 @@
   "name": "@onesy/hash-table",
   "version": "1.0.0",
   "description": "Hash table",
-  "repository": "https://github.com/onesy-org/onesy-hash-table.git",
+  "repository": "https://github.com/onesy-me/hash-table.git",
   "author": "Lazar <lazareric2@gmail.com>",
   "license": "MIT",
   "private": false,

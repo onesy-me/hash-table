@@ -1,4 +1,4 @@
-import { is } from '@onesy/utils';
+import is from '@onesy/utils/is';
 
 export type TOnesyHashTableValue = any;
 

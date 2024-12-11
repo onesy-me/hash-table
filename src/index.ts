@@ -1,1 +1,1 @@
-export { default } from './AmauiHashTable';
+export { default } from './OnesyHashTable';

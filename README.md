@@ -4,11 +4,11 @@
 
 <p align='center'>
   <a target='_blank' rel='noopener noreferrer' href='#'>
-    <img src='utils/images/logo.svg' alt='amaui logo' />
+    <img src='utils/images/logo.svg' alt='onesy logo' />
   </a>
 </p>
 
-<h1 align='center'>amaui Hash table</h1>
+<h1 align='center'>onesy Hash table</h1>
 
 <p align='center'>
   Hash table
@@ -39,7 +39,7 @@
 ### Add
 
 ```sh
-yarn add @amaui/hash-table
+yarn add @onesy/hash-table
 ```
 
 ### Use cases
@@ -52,25 +52,25 @@ yarn add @amaui/hash-table
 ### Use
 
 ```javascript
-  import AmauiHashTable from '@amaui/hash-table';
+  import OnesyHashTable from '@onesy/hash-table';
 
   // Make a new hash table instance
-  const amauiHashTable = new AmauiHashTable();
+  const onesyHashTable = new OnesyHashTable();
 
   // Add values
-  amauiHashTable.set('a', 14).set('a1', 114);
+  onesyHashTable.set('a', 14).set('a1', 114);
 
-  amauiHashTable.get('a');
+  onesyHashTable.get('a');
   // 14
 
-  amauiHashTable.get('a14');
+  onesyHashTable.get('a14');
   // undefined
 
   // Remove
-  amauiHashTable.remove('a');
+  onesyHashTable.remove('a');
   // true
 
-  amauiHashTable.get('a');
+  onesyHashTable.get('a');
   // undefined
 ```
 

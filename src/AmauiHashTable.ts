@@ -1,9 +1,9 @@
-import { is } from '@amaui/utils';
+import { is } from '@onesy/utils';
 
-export type TAmauiHashTableValue = any;
+export type TOnesyHashTableValue = any;
 
-export default class AmauiHashTable {
-  public value: Array<[string?, TAmauiHashTableValue?]> = [];
+export default class OnesyHashTable {
+  public value: Array<[string?, TOnesyHashTableValue?]> = [];
   public length = 0;
   // ASCII character code range 0-127
   public limit = 127;
@@ -27,7 +27,7 @@ export default class AmauiHashTable {
     return value % this.limit;
   }
 
-  public get(property: string): TAmauiHashTableValue {
+  public get(property: string): TOnesyHashTableValue {
     const index = this.hash(property);
 
     const values = this.value[index] || [];
@@ -35,7 +35,7 @@ export default class AmauiHashTable {
     return values.find(item => item[0] === property)?.[1];
   }
 
-  public set(property: string, value: TAmauiHashTableValue): AmauiHashTable {
+  public set(property: string, value: TOnesyHashTableValue): OnesyHashTable {
     const index = this.hash(property);
 
     if (!this.value[index]) this.value[index] = [];
@@ -52,7 +52,7 @@ export default class AmauiHashTable {
   public remove(property: string): boolean {
     const index = this.hash(property);
 
-    const values: Array<[string, TAmauiHashTableValue]> = this.value[index];
+    const values: Array<[string, TOnesyHashTableValue]> = this.value[index];
 
     if (values) {
       const valueIndex = values.findIndex(item => item[0] === property);
@@ -69,7 +69,7 @@ export default class AmauiHashTable {
     return false;
   }
 
-  public clear(): AmauiHashTable {
+  public clear(): OnesyHashTable {
     this.value = new Array(this.limit);
 
     this.length = 0;

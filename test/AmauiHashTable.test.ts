@@ -1,19 +1,19 @@
 /* tslint:disable: no-shadowed-variable */
-import { assert } from '@amaui/test';
+import { assert } from '@onesy/test';
 
 import { evaluate } from '../utils/js/test/utils';
 
-import AmauiHashTable from '../src';
+import OnesyHashTable from '../src';
 
-group('AmauiHashTable', () => {
+group('OnesyHashTable', () => {
 
-  to('AmauiHashTable', async () => {
-    const value = new AmauiHashTable();
+  to('OnesyHashTable', async () => {
+    const value = new OnesyHashTable();
 
     value.set('a', 14);
 
     const valueBrowsers = await evaluate((window: any) => {
-      const value = new window.AmauiHashTable();
+      const value = new window.OnesyHashTable();
 
       value.set('a', 14);
 
@@ -25,15 +25,15 @@ group('AmauiHashTable', () => {
     values.forEach(value => assert(value).eql([14, 1]));
   });
 
-  group('amauiHashTable', async () => {
+  group('onesyHashTable', async () => {
 
     to('length', async () => {
-      const value = new AmauiHashTable();
+      const value = new OnesyHashTable();
 
       value.set('a', 14);
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiHashTable();
+        const value = new window.OnesyHashTable();
 
         value.set('a', 14);
 
@@ -46,12 +46,12 @@ group('AmauiHashTable', () => {
     });
 
     to('hash', async () => {
-      const value = new AmauiHashTable();
+      const value = new OnesyHashTable();
 
       value.set('a', 14).set('a1', 114);
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiHashTable();
+        const value = new window.OnesyHashTable();
 
         value.set('a', 14).set('a1', 114);
 
@@ -64,12 +64,12 @@ group('AmauiHashTable', () => {
     });
 
     to('get', async () => {
-      const value = new AmauiHashTable();
+      const value = new OnesyHashTable();
 
       value.set('a', 14);
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiHashTable();
+        const value = new window.OnesyHashTable();
 
         value.set('a', 14);
 
@@ -82,12 +82,12 @@ group('AmauiHashTable', () => {
     });
 
     to('set', async () => {
-      const value = new AmauiHashTable();
+      const value = new OnesyHashTable();
 
       value.set('a', 14);
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiHashTable();
+        const value = new window.OnesyHashTable();
 
         value.set('a', 14);
 
@@ -100,10 +100,10 @@ group('AmauiHashTable', () => {
     });
 
     to('remove', async () => {
-      const value = new AmauiHashTable();
+      const value = new OnesyHashTable();
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiHashTable();
+        const value = new window.OnesyHashTable();
 
         return [value.set('a', 14).get('a'), value.remove('a'), value.get('a')];
       });
@@ -114,10 +114,10 @@ group('AmauiHashTable', () => {
     });
 
     to('clear', async () => {
-      const value = new AmauiHashTable();
+      const value = new OnesyHashTable();
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiHashTable();
+        const value = new window.OnesyHashTable();
 
         return [value.set('a', 14).get('a'), value.clear().get('a'), value.length];
       });

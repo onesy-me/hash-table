@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Hash table",
   "repository": "https://github.com/onesy-me/hash-table.git",
-  "author": "Lazar <lazareric2@gmail.com>",
+  "author": "Lazar Erić <lazareric1@proton.me>",
   "license": "MIT",
   "private": false,
   "main": "./src/index.ts",
